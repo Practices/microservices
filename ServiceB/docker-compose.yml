@@ -1,0 +1,4 @@
+webservice2:
+  build: .
+  ports:
+    - "8086:8080"

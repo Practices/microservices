@@ -1,0 +1,9 @@
+webservice1:
+  build: .
+  ports:
+    - "8085:8080"
+  links:
+    - mongo
+mongo:
+  image: mongo
+  command: "--smallfiles"

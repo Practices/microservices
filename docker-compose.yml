@@ -1,0 +1,16 @@
+webservice1:
+  build: ./servicea
+  ports:
+    - "8085:8080"
+  links:
+    - mongo
+mongo:
+  image: mongo
+  command: "--smallfiles"
+
+webservice2:
+  build: ./serviceb
+  ports:
+    - "8086:8080"
+  links:
+    - webservice1
